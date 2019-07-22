@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions  xmlns="http://schemas.microsoft.com/build/2009/properties"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Rule Name="natexec_config" PageTemplate="generic" DisplayName="Custom Lib Config">
+        <Rule.Categories>
+            <Category Name="natexec_main" DisplayName="Main Configuration" />
+        </Rule.Categories>
+        <Rule.DataSource>
+            <DataSource Persistence="UserFile" ItemType="" />
+        </Rule.DataSource>
+        <BoolProperty Name="NATEXEC_DISABLE_NATIVE_IMPL" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Disable native implementation</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>Where possible, the native platform implementation is disabled in favor of NativeExecutive software implementations. This should be used if you do not trust the native implementation.</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_FIRST_ENTRY_POINT" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Compile with first-entry-point</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>Exports a symbol called "_native_executive_fep" that should be used as entry point to the program. If used, then the global memory allocator override can properly work. Initialization of the module is well defined.</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_GLOBALMEM_OVERRIDE" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Override global memory</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>All calls to global memory allocators (malloc, realloc, free, calloc, etc) are overriden with NativeExecutive memory allocation. Thread safety is guarranteed across all platforms.</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_LOG_GLOBAL_ALLOC" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Global memory logging</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>Puts global memory calls into logs (console for example) so that they can be debugged.</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_EXCEPTION_COPYPUSH" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Smart exception forwarding</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>Enables smart exception forwarding for fibers, so that the exact exception type is forwarded across yield and termination. Results in more usage of global memory allocators (depending on compiler implementation).</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_NO_HEAPPTR_VERIFY" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>No heap-pointer verify</BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                Disables the heap-pointer verification on every heap-redirector call to speed up debugging. Do only enable this if you are certain that no invalid heap pointers are used.
+            </BoolProperty.Description>
+        </BoolProperty>
+        <EnumProperty Name="NATEXEC_FEP_TYPE" Category="natexec_main" IsRequired="true">
+            <EnumProperty.DisplayName>FEP Type</EnumProperty.DisplayName>
+            <EnumProperty.Description>
+                Sets the entry-point signature type to be exported by NativeExecutive. This has to match the DLL/EXE requirement.
+            </EnumProperty.Description>
+            <EnumProperty.AdmissibleValues>
+                <EnumValue Name="main" DisplayName="main" />
+                <EnumValue Name="WinMain" DisplayName="WinMain" />
+                <EnumValue Name="DllMain" DisplayName="DllMain" />
+            </EnumProperty.AdmissibleValues>
+        </EnumProperty>
+    </Rule>
+</ProjectSchemaDefinitions>

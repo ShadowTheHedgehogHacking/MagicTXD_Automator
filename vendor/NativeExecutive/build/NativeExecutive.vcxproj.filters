@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{b23268d7-b268-4998-97fb-f304e9e6b448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="private_headers">
+      <UniqueIdentifier>{ef9c0d08-96de-4489-9d53-4d7372d8d1e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\src\native_routines_x86.asm" />
+    <MASM Include="..\src\native_routines_x64.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\native_shared.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.rwlock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.task.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.thread.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.cond.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.fiber.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.hazards.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.cond.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.execgroup.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.fiber.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.rwlock.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.thread.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CommonUtils.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\NativeUtils.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\StdInc.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CExecutiveManager.fiber.hxx">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CExecutiveManager.hazards.hxx">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CExecutiveManager.native.hxx">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.task.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.threadplugins.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.qol.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CExecutiveManager.thread.hxx">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CExecutiveManager.cond.hxx">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.event.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.event.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CExecutiveManager.rwlock.hxx">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CExecutiveManager.evtwait.hxx">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.spinlock.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.spinlock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PluginUtils.hxx">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.unfairmtx.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.unfairmtx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CExecutiveManager.eventplugin.hxx">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.memory.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal\CExecutiveManager.sem.internal.h">
+      <Filter>private_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.sem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CExecutiveManager.cond.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.execgroup.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.fiber.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.hazards.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rwlock.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rwlock.impl.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.task.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.thread.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.memory.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.event.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.event.win32.evthandle.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.event.win32.waitaddr.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rwlock.win32.srw.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.evtwait.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.spinlock.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.unfairmtx.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.fep.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rentrwlock.impl.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.stats.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rentrwlock.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.sem.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.event.linux.futex.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="customprops.xml" />
+  </ItemGroup>
+</Project>

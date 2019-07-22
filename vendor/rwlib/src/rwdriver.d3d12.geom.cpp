@@ -1,0 +1,26 @@
+#include "StdInc.h"
+
+#ifndef _COMPILE_FOR_LEGACY
+
+#ifdef _WIN32
+
+#include "rwdriver.d3d12.hxx"
+
+namespace rw
+{
+
+void d3d12DriverInterface::GeometryInstance( Interface *engineInterface, void *driverObjMem, void *objMem, Geometry *sysGeom )
+{
+
+}
+
+void d3d12DriverInterface::GeometryUninstance( Interface *engineInterface, void *driverObjMem, void *objMem )
+{
+
+}
+
+};
+
+#endif //_WIN32
+
+#endif //_COMPILE_FOR_LEGACY

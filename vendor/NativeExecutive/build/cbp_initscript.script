@@ -1,0 +1,42 @@
+function SetBuildOptions(base)
+{
+    OPTIONS <- {
+        NATEXEC_DISABLE_NATIVE_IMPL = false,
+        NATEXEC_FIRST_ENTRY_POINT = false,
+        NATEXEC_GLOBALMEM_OVERRIDE = true,
+        NATEXEC_LOG_GLOBAL_ALLOC = false,
+        NATEXEC_EXCEPTION_COPYPUSH = true,
+        NATEXEC_NO_HEAPPTR_VERIFY = true,
+        NATEXEC_FEP_TYPE = "main"
+    };
+
+    if (IO.FileExists(_T("../../_repoconfig/NativeExecutive.sq")))
+    {
+        Require(_T("../../_repoconfig/NativeExecutive.sq"));
+    }
+    
+    if (OPTIONS.NATEXEC_DISABLE_NATIVE_IMPL)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_DISABLE_NATIVE_IMPL"));
+    }
+    if (OPTIONS.NATEXEC_FIRST_ENTRY_POINT)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_FIRST_ENTRY_POINT"));
+    }
+    if (OPTIONS.NATEXEC_GLOBALMEM_OVERRIDE)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_GLOBALMEM_OVERRIDE"));
+    }
+    if (OPTIONS.NATEXEC_LOG_GLOBAL_ALLOC)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_LOG_GLOBAL_ALLOC"));
+    }
+    if (OPTIONS.NATEXEC_EXCEPTION_COPYPUSH)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_EXCEPTION_COPYPUSH"));
+    }
+    if (OPTIONS.NATEXEC_NO_HEAPPTR_VERIFY)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_NO_HEAPPTR_VERIFY"));
+    }
+}

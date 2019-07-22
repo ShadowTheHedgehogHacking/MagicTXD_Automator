@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="CompressonatorLib" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../Build/Linux/Debug/CompressonatorLib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../Build/Linux/Temp/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../Build/Linux/Release/CompressonatorLib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../Build/Linux/Temp/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../Source/Common" />
+			<Add directory="../../Common/Lib/Ext/OpenEXR/ilmbase-2.2.0/Half" />
+			<Add directory="../../Common/Lib/AMD/APPSDK/3-0/include" />
+			<Add directory="../Header" />
+			<Add directory="../Header/Codec" />
+			<Add directory="../Header/Codec/BC7" />
+			<Add directory="../Header/Codec/BC6H" />
+			<Add directory="../Header/Codec/ASTC" />
+			<Add directory="../Header/Codec/ASTC/ARM" />
+			<Add directory="../Header/Codec/APC" />
+			<Add directory="../Header/Codec/ATC" />
+			<Add directory="../Header/Codec/ATI" />
+			<Add directory="../Header/Codec/Block" />
+			<Add directory="../Header/Codec/Buffer" />
+			<Add directory="../Header/Codec/DXT" />
+			<Add directory="../Header/Codec/DXTC" />
+			<Add directory="../Header/Codec/ETC" />
+			<Add directory="../Header/Codec/ETC/etcpack" />
+			<Add directory="../Header/Codec/GT" />
+			<Add directory="../Header/Internal" />
+			<Add directory="../Utils" />
+		</Compiler>
+		<UnitsGlob directory="../Source/Common" recursive="1" wildcard="*.cpp" />
+		<UnitsGlob directory="../Source/Common" recursive="1" wildcard="*.cxx" />
+		<UnitsGlob directory="../Source/Common" recursive="1" wildcard="*.c" />
+		<UnitsGlob directory="../Source/Common" recursive="0" wildcard="*.h" />
+		<UnitsGlob directory="../Source/Common/Codec" recursive="1" wildcard="*.h" />
+		<UnitsGlob directory="../Source/Codec" recursive="1" wildcard="*.cpp" />
+		<UnitsGlob directory="../Source/Codec" recursive="1" wildcard="*.cxx" />
+		<UnitsGlob directory="../Source/Codec" recursive="1" wildcard="*.c" />
+		<UnitsGlob directory="../Source" recursive="0" wildcard="*.cpp" />
+		<Unit filename="../../Common/Lib/Ext/OpenEXR/ilmbase-2.2.0/Half/half.cpp" />
+		<Unit filename="../../Common/Lib/Ext/OpenEXR/ilmbase-2.2.0/Half/half.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

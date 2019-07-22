@@ -1,0 +1,1 @@
+// LEGACY file, see SDK headers "Endian.h".

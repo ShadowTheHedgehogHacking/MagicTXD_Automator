@@ -1,0 +1,18 @@
+// This script uses hacks for the GCC compiler to compile properly.
+// Visit http://green-candy.osdn.jp/ Tutorials to read more.
+
+function SetBuildOptions(base)
+{
+    if (IO.DirectoryExists(_T("../../zlib/")))
+    {
+        base.AddIncludeDir(_T("../../zlib/include"));
+        base.AddLinkerOption(_T("../../zlib/lib/linux/$(TARGET_NAME)/libzlib.a"));
+        base.AddCompilerOption(_T("-D FILESYS_ENABLE_ZIP"));
+    }
+    if (IO.DirectoryExists(_T("../../NativeExecutive/")))
+    {
+        base.AddIncludeDir(_T("../../NativeExecutive/include/NativeExecutive"));
+        base.AddLinkerOption(_T("../../NativeExecutive/lib/linux/$(TARGET_NAME)/libnatexec.a"));
+        base.AddCompilerOption(_T("-D FILESYS_MULTI_THREADING"));
+    }
+}
