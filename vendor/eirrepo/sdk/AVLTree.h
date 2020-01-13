@@ -36,6 +36,106 @@ struct AVLNode
     // TODO: find a way to segregate the AVL default fields from the nodestack field so that
     //  it is easier to maintain this thing.
 
+    // WARNING: only use this method if you know that a node (right) is part of a tree.
+    // Otherwise you perform undefined behavior.
+    // Calling this method does destroy the tree ownership of "right", so make sure you
+    // remove the condition that casts it into a tree.
+    // WARNING: make sure that you have taken over the same value to the new object from
+    // the moved-from object or else the tree will be wrecked.
+    inline void moveTo( AVLNode&& right ) noexcept
+    {
+        AVLNode *parent = right.parent;
+
+        // Are we a nodestack member?
+        if ( parent == &right )
+        {
+            this->parent = this;
+            this->nodestack_owner = right.nodestack_owner;
+            
+            AVLNode *next_listnode = right.next;
+
+            // Because we have a linked-list that loops back to the first nodestack item
+            // all pointers to members are not nullptr.
+            // So fix up the links.
+            next_listnode->prev = this;
+
+            this->next = next_listnode;
+
+            AVLNode *prev_listnode = right.prev;
+
+            prev_listnode->next = this;
+
+            this->prev = prev_listnode;
+        }
+        else
+        {
+            if ( parent != nullptr )
+            {
+                // Depends on if we are left or right of the node.
+                if ( parent->left == &right )
+                {
+                    parent->left = this;
+                }
+                else if ( parent->right == &right )
+                {
+                    parent->right = this;
+                }
+                else
+                {
+                    assert( 0 );
+                }
+            }
+
+            this->parent = parent;
+
+            // Fix up the children.
+            AVLNode *left_node = right.left;
+
+            if ( left_node != nullptr )
+            {
+                assert( left_node->parent == &right );
+                
+                left_node->parent = this;
+            }
+
+            this->left = left_node;
+
+            AVLNode *right_node = right.right;
+
+            if ( right_node != nullptr )
+            {
+                assert( right_node->parent == &right );
+
+                right_node->parent = this;
+            }
+
+            this->right = right_node;
+
+            // We have the same height, too.
+            this->height = right.height;
+
+            // Fix up all nodestack items, if we are having a nodestack.
+            AVLNode *owned_nodestack = right.owned_nodestack;
+
+            if ( owned_nodestack != nullptr )
+            {
+                AVLNode *iter = owned_nodestack;
+
+                do
+                {
+                    assert( iter->nodestack_owner == &right );
+
+                    iter->nodestack_owner = this;
+
+                    iter = iter->next;
+                }
+                while ( iter != owned_nodestack );
+            }
+
+            this->owned_nodestack = owned_nodestack;
+        }
+    }
+
     // We keep the default constructor while deleting the obvious culprits for safety.
     inline AVLNode( void ) = default;
     inline AVLNode( const AVLNode& ) = delete;
@@ -445,111 +545,6 @@ public:
         update_invalidated_tree_height( parent );
     }
 
-    // WARNING: only use this method if you know that a node (right) is part of a tree.
-    // Otherwise you perform undefined behavior.
-    // Calling this method does destroy the tree ownership of "right", so make sure you
-    // remove the condition that casts it into a tree.
-    // WARNING: make sure that you have taken over the same value to the new object from
-    // the moved-from object or else the tree will be wrecked.
-    inline void MoveNodeTo( AVLNode& left, AVLNode&& right ) noexcept
-    {
-        AVLNode *parent = right.parent;
-
-        // Are we a nodestack member?
-        if ( parent == &right )
-        {
-            left.parent = &left;
-            left.nodestack_owner = right.nodestack_owner;
-            
-            AVLNode *next_listnode = right.next;
-
-            // Because we have a linked-list that loops back to the first nodestack item
-            // all pointers to members are not nullptr.
-            // So fix up the links.
-            next_listnode->prev = &left;
-
-            left.next = next_listnode;
-
-            AVLNode *prev_listnode = right.prev;
-
-            prev_listnode->next = &left;
-
-            left.prev = prev_listnode;
-        }
-        else
-        {
-            if ( parent != nullptr )
-            {
-                // Depends on if we are left or right of the node.
-                if ( parent->left == &right )
-                {
-                    parent->left = &left;
-                }
-                else if ( parent->right == &right )
-                {
-                    parent->right = &left;
-                }
-                else
-                {
-                    assert( 0 );
-                }
-            }
-            else
-            {
-                // Update the root.
-                this->root = &left;
-            }
-
-            left.parent = parent;
-
-            // Fix up the children.
-            AVLNode *left_node = right.left;
-
-            if ( left_node != nullptr )
-            {
-                assert( left_node->parent == &right );
-                
-                left_node->parent = &left;
-            }
-
-            left.left = left_node;
-
-            AVLNode *right_node = right.right;
-
-            if ( right_node != nullptr )
-            {
-                assert( right_node->parent == &right );
-
-                right_node->parent = &left;
-            }
-
-            left.right = right_node;
-
-            // We have the same height, too.
-            left.height = right.height;
-
-            // Fix up all nodestack items, if we are having a nodestack.
-            AVLNode *owned_nodestack = right.owned_nodestack;
-
-            if ( owned_nodestack != nullptr )
-            {
-                AVLNode *iter = owned_nodestack;
-
-                do
-                {
-                    assert( iter->nodestack_owner == &right );
-
-                    iter->nodestack_owner = &left;
-
-                    iter = iter->next;
-                }
-                while ( iter != owned_nodestack );
-            }
-
-            left.owned_nodestack = owned_nodestack;
-        }
-    }
-
 private:
     // Simple method that is compatible with any binary tree. :)
     static AINLINE AVLNode* FindMaxNode( AVLNode *searchFrom, AVLNode**& searchFromPtrInOut )
@@ -811,12 +806,6 @@ public:
         remove_node( node, iterPtr, node->left, node->right, parent );
 
         return true;
-    }
-
-    // Clears the tree, removing all nodes from it.
-    inline void Clear( void )
-    {
-        this->root = nullptr;
     }
 
     // Iterates over every same-value node of a node-stack. The walkNode must be a node

@@ -15,8 +15,6 @@
 
 BEGIN_NATIVE_EXECUTIVE
 
-#if 0
-
 // Create the internal redirect for the public API.
 void CSpinLock::lock( void )
 {
@@ -38,8 +36,6 @@ void CSpinLock::unlock( void )
 
     nativeLock->unlock();
 }
-
-#endif //0
 
 // Public creation API.
 CSpinLock* CExecutiveManager::CreateSpinLock( void )

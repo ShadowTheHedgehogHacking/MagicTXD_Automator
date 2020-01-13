@@ -968,11 +968,6 @@ AINLINE bool isCoveredIntersect( eIntersectionResult result ) noexcept
     return ( result == INTERSECT_EQUAL || result == INTERSECT_INSIDE );
 }
 
-AINLINE bool isCoveringIntersect( eIntersectionResult result ) noexcept
-{
-    return ( result == INTERSECT_EQUAL || result == INTERSECT_ENCLOSING );
-}
-
 // Representation of a mathematical interval.
 template <typename numberType>
 class mathSlice
@@ -1201,14 +1196,6 @@ public:
         }
 
         return hasPosition;
-    }
-
-    AINLINE mathSlice getSharedEnclosingRegion( const mathSlice& unifyWith ) const
-    {
-        return mathSlice::fromBounds(
-            std::min( this->startBound, unifyWith.startBound ),
-            std::max( this->endBound, unifyWith.endBound )
-        );
     }
 
     template <typename callbackType>

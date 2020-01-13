@@ -190,8 +190,6 @@ void registerEventManagement( void )
 
     // Pick the best implementation.
 #ifdef _WIN32
-
-#ifndef _COMPILE_FOR_LEGACY
     if ( _event_win32_waitaddr_is_available() )
     {
         _evtMemSize = _event_win32_waitaddr_get_size();
@@ -203,7 +201,6 @@ void registerEventManagement( void )
         _event_wait_timed = _event_win32_waitaddr_wait_timed;
         goto pickedImplementation;
     }
-#endif //_COMPILE_FOR_LEGACY
 
     if ( _event_win32_evthandle_is_supported() )
     {

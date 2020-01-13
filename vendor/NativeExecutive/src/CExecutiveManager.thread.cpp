@@ -641,7 +641,7 @@ bool nativeThreadPluginInterface::OnPluginConstruct( CExecThreadImpl *thread, pr
         int clone_res =
             clone(
                 _linux_threadEntryPoint, stack_beg_ptr,
-                /*SIGCHLD|CLONE_PTRACE|*/CLONE_SIGHAND|CLONE_THREAD|CLONE_PARENT|CLONE_VM|CLONE_CHILD_CLEARTID|CLONE_FILES|CLONE_FS,
+                /*SIGCHLD|CLONE_FILES|CLONE_FS|CLONE_IO|CLONE_PTRACE|*/CLONE_SIGHAND|CLONE_THREAD|CLONE_PARENT|CLONE_VM|CLONE_CHILD_CLEARTID,
                 info, nullptr, nullptr, &info->codeThread
             );
 
@@ -650,7 +650,7 @@ bool nativeThreadPluginInterface::OnPluginConstruct( CExecThreadImpl *thread, pr
             eventStartThread->Set( false );
             eventRunningThread->Set( false );
 
-            munmap( stack_mem, theStackSize );
+            free( stack_mem );
             return false;
         }
 

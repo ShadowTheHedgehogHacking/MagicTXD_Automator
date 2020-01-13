@@ -1,10 +1,11 @@
 # MagicTXD_Automator
 
-Edited version of MagicTXD revision26 cloned 7/22/2019, for bulk actions 
+Edited version of MagicTXD revision26 to crunch textures based on minor rules for 2P-ShdTH
 
-## Planned:
-* Batch format edit for all files in archive (ex: resize operation with percentage and definable exclusion exceptions for every texture within a TXD)
-* Multiple TXD contraint bulk edit (ex: replace fileA with file_name with fileB for all .TXD selected)
+Replaces the "Export All" PNG option -> Simply hit "EXPORT" and the operation will take place.
+
+## Done:
+* Batch format edit for all files in archive (ex: resize operation with percentage or ratio based for exclusion for every texture within a TXD)
 
 ## How to build
 0. Install Visual Studio 2019 Community (or other ver) with "Desktop development with C++" enabled and under Individual components enable C++ CMake tools for Windows

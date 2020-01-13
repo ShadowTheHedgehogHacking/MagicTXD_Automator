@@ -57,18 +57,56 @@ struct TexResizeWindow : public QDialog, public magicTextLocalizationItem
         // We only want to accept unsigned integers.
         QIntValidator *dimensionValidator = new QIntValidator( 1, ( rasterRules.maximum ? rasterRules.maxVal : 4096 ), this );
 
-        MagicLineEdit *widthEdit = new MagicLineEdit( ansi_to_qt( std::to_string( curWidth ) ) );
-        widthEdit->setValidator( dimensionValidator );
+		//dream: create rules here
+		//CASE: 8x128, 4x64, how to handle?
+		//CASE: Matching 1:1 any size, how to handle?
+
+		MagicLineEdit* widthEdit;
+		MagicLineEdit* heightEdit;
+		//1:1 matching size ALL APPLY RULES
+		if (curWidth == curHeight) {
+			// only resize larger than 16x16
+			if (curWidth > 16) {
+				if (curWidth > 64) {
+					//128++ only resize to 32
+					widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(32)));
+					heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(32)));
+				} else {
+					widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(16)));
+					heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(16)));
+				}
+			} else {
+				//leave 16x16 and lower alone
+				widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curWidth)));
+				heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curHeight)));
+			}
+		} else {
+			// RATIO MISMATCHING case
+			if (curWidth > 2 && curHeight > 2) {
+				if (curWidth == 4 || curHeight == 4) {
+					//4xY/Xx4 case, half
+					widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curWidth/2)));
+					heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curHeight/2)));
+				} else {
+					// Ratio is larger than 4xY, not expecting anything over 8x*, may need modification later
+					widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curWidth / 4)));
+					heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curHeight / 4)));
+				}
+			} else {
+				// Do not resize any 1:X nor 2:X
+				widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curWidth)));
+				heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curHeight)));
+			}
+
+		}
+
+		widthEdit->setValidator(dimensionValidator);
+		heightEdit->setValidator(dimensionValidator);
 
         this->widthEdit = widthEdit;
-
         connect( widthEdit, &QLineEdit::textChanged, this, &TexResizeWindow::OnChangeDimensionProperty );
 
-        MagicLineEdit *heightEdit = new MagicLineEdit( ansi_to_qt( std::to_string( curHeight ) ) );
-        heightEdit->setValidator( dimensionValidator );
-
         this->heightEdit = heightEdit;
-
         connect( heightEdit, &QLineEdit::textChanged, this, &TexResizeWindow::OnChangeDimensionProperty );
 
         layout.top->addRow( CreateLabelL( "Main.Resize.Width" ), widthEdit );
@@ -120,58 +158,56 @@ public slots:
         // Do the resize.
         bool shouldClose = true;
 
-        if ( TexInfoWidget *texInfo = this->texInfo )
-        {
-            if ( rw::TextureBase *texHandle = texInfo->GetTextureHandle() )
-            {
-                if ( rw::Raster *texRaster = texHandle->GetRaster() )
-                {
-                    // Fetch the sizes (with minimal validation).
-                    QString widthDimmString = this->widthEdit->text();
-                    QString heightDimmString = this->heightEdit->text();
+		// dream: BEGIN ALL TEXTURE RESIZE
+		rw::TexDictionary* texDict = this->texDict;
+		for (rw::TexDictionary::texIter_t iter(texDict->GetTextureIterator()); !iter.IsEnd(); iter.Increment())
+		{
+			rw::TextureBase* texture = iter.Resolve();
+			// We can only serialize if we have a raster.
+			rw::Raster* texRaster = texture->GetRaster();
 
-                    bool validWidth, validHeight;
+			// Fetch the sizes (with minimal validation).
+			QString widthDimmString = this->widthEdit->text();
+			QString heightDimmString = this->heightEdit->text();
 
-                    int widthDimm = widthDimmString.toInt( &validWidth );
-                    int heightDimm = heightDimmString.toInt( &validHeight );
+			bool validWidth, validHeight;
 
-                    if ( validWidth && validHeight )
-                    {
-                        // Resize!
-                        rw::uint32 rwWidth = (rw::uint32)widthDimm;
-                        rw::uint32 rwHeight = (rw::uint32)heightDimm;
+			int widthDimm = widthDimmString.toInt(&validWidth);
+			int heightDimm = heightDimmString.toInt(&validHeight);
 
-                        bool success = false;
+			if (validWidth && validHeight)
+			{
+				// Resize!
+				rw::uint32 rwWidth = (rw::uint32)widthDimm;
+				rw::uint32 rwHeight = (rw::uint32)heightDimm;
 
-                        try
-                        {
-                            // Use default filters.
-                            texRaster->resize( rwWidth, rwHeight );
+				bool success = false;
 
-                            success = true;
-                        }
-                        catch( rw::RwException& except )
-                        {
-                            this->mainWnd->txdLog->showError( QString( "failed to resize raster: " ) + ansi_to_qt( except.message ) );
+				try
+				{
+					// Use default filters.
+					texRaster->resize(rwWidth, rwHeight);
 
-                            // We should not close the dialog.
-                            shouldClose = false;
-                        }
+					success = true;
+				}
+				catch (rw::RwException& except)
+				{
+					this->mainWnd->txdLog->showError(QString("failed to resize raster: ") + ansi_to_qt(except.message));
 
-                        if ( success )
-                        {
-                            // We have changed the TXD.
-                            this->mainWnd->NotifyChange();
+					// We should not close the dialog.
+					shouldClose = false;
+				}
 
-                            // Since we succeeded, we should update the view and things.
-                            this->mainWnd->updateTextureView();
+			}
+		}
+		// We have changed the TXD.
+		this->mainWnd->NotifyChange();
 
-                            texInfo->updateInfo();
-                        }
-                    }
-                }
-            }
-        }
+		// Since we succeeded, we should update the view and things.
+		this->mainWnd->updateTextureView();
+
+		texInfo->updateInfo();
+		// END ALL TEXTURE RESIZE
 
         if ( shouldClose )
         {
@@ -258,6 +294,7 @@ private:
     }
 
     MainWindow *mainWnd;
+	rw::TexDictionary* texDict;
 
     TexInfoWidget *texInfo;
 

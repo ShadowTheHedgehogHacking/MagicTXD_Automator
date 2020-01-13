@@ -299,60 +299,6 @@ private:
     // not happened yet.
 };
 
-// It is often required to construct an optional_struct_space as part of a running stack.
-// Thus we need a wrapper that simplifies the cleanup of such activity.
-template <typename structType>
-struct optional_struct_space_init
-{
-    template <typename... constrArgs>
-    AINLINE optional_struct_space_init( optional_struct_space <structType>& varloc, constrArgs&&... args ) noexcept : varloc( &varloc )
-    {
-        varloc.Construct( std::forward <constrArgs> ( args )... );
-    }
-    AINLINE optional_struct_space_init( const optional_struct_space_init& ) = delete;
-    AINLINE optional_struct_space_init( optional_struct_space_init&& right ) noexcept
-    {
-        this->varloc = right.varloc;
-
-        right.varloc = nullptr;
-    }
-    AINLINE ~optional_struct_space_init( void )
-    {
-        if ( optional_struct_space <structType> *varloc = this->varloc )
-        {
-            varloc->Destroy();
-        }
-    }
-
-    AINLINE optional_struct_space_init& operator = ( const optional_struct_space_init& ) = delete;
-    AINLINE optional_struct_space_init& operator = ( optional_struct_space_init&& right ) noexcept
-    {
-        if ( optional_struct_space <structType> *varloc = this->varloc )
-        {
-            varloc->Destroy();
-        }
-
-        this->varloc = right.varloc;
-
-        return *this;
-    }
-
-    AINLINE structType& get( void ) const
-    {
-        optional_struct_space <structType> *varloc = this->varloc;
-
-        if ( varloc == nullptr )
-        {
-            throw eir_exception();
-        }
-
-        return varloc->get();
-    }
-
-private:
-    optional_struct_space <structType> *varloc;
-};
-
 // The basic allocator that links to the CRT.
 // I was heavy against exposing this but I cannot overcome the static-initialization order in current C++17.
 struct CRTHeapAllocator

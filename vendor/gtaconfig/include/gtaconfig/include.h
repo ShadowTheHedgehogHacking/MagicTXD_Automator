@@ -3,11 +3,11 @@
 #include <math.h>
 #include <algorithm>
 
-#include "config.h"
-#include "syntax.h"
-#include "csv.h"
-#include "ide.h"
-#include "ini.h"
-#include "ipl.h"
-#include "objdat.h"
+#include "../../src/config.h"
+#include "../../src/syntax.h"
+#include "../../src/csv.h"
+#include "../../src/ide.h"
+#include "../../src/ini.h"
+#include "../../src/ipl.h"
+#include "../../src/objdat.h"
 #include "option.h"

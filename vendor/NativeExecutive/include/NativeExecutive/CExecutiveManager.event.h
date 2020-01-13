@@ -22,7 +22,6 @@ class CEvent abstract
 public:
     void        Set( bool shouldWait );
     void        Wait( void );
-    // Returns true if the event was woken up, false if the wait has timed out.
     bool        WaitTimed( unsigned int msTimeout );
 };
 

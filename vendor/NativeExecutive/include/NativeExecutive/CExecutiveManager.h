@@ -34,9 +34,9 @@ END_NATIVE_EXECUTIVE
 #include "CExecutiveManager.fiber.h"
 #include "CExecutiveManager.task.h"
 #include "CExecutiveManager.rwlock.h"
-#include "CExecutiveManager.spinlock.h"
 #include "CExecutiveManager.cond.h"
 #include "CExecutiveManager.event.h"
+#include "CExecutiveManager.spinlock.h"
 #include "CExecutiveManager.unfairmtx.h"
 #include "CExecutiveManager.sem.h"
 

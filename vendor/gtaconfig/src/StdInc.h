@@ -4,7 +4,7 @@
 
 #include <CFileSystemInterface.h>
 
-#include "include.h"
+#include "../include/gtaconfig/include.h"
 
 // Default allocator for this library.
 struct ConfigHeapAllocator

@@ -638,9 +638,6 @@ void CZIPArchiveTranslator::fileMetaData::ChangeToState( eFileDataState changeTo
         bool doCompress = false;
         bool doDecompress = false;
 
-        (void)doCompress;
-        (void)doDecompress;
-
         if ( ( ( curDataState == eFileDataState::ARCHIVED || curDataState == eFileDataState::PRESENT_COMPRESSED ) && changeToState == eFileDataState::PRESENT_COMPRESSED ) ||
              comprType == 0 )
         {
@@ -795,8 +792,6 @@ size_t zipStream::Read( void *buffer, size_t readCount )
                 // segments transform into segments of potentially different sizes.
                 // The_GTA: Do not try to think of it too much. Just be happy that I solved this clusterfuck for you.
                 fsOffsetNumber_t compressedSeek = this->m_compressedSeek;
-
-                (void)compressedSeek;
 
                 bool couldRead = false;
 

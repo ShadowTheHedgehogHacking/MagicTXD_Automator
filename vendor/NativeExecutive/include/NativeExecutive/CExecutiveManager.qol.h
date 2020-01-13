@@ -32,7 +32,7 @@ struct natExecInst
 
         this->manager = manager;
     }
-    inline natExecInst( natExecInst&& right ) noexcept
+    inline natExecInst( natExecInst&& right )
     {
         this->manager = right.manager;
 
@@ -47,7 +47,7 @@ struct natExecInst
         }
     }
 
-    inline natExecInst& operator = ( natExecInst&& right ) noexcept
+    inline natExecInst& operator = ( natExecInst&& right )
     {
         this->~natExecInst();
 
@@ -93,7 +93,7 @@ struct natThreadInst
     {
         this->thread = thread;
     }
-    inline natThreadInst( natThreadInst&& right ) noexcept
+    inline natThreadInst( natThreadInst&& right )
     {
         this->thread = right.thread;
 
@@ -111,7 +111,7 @@ struct natThreadInst
         }
     }
 
-    inline natThreadInst& operator = ( natThreadInst&& right ) noexcept
+    inline natThreadInst& operator = ( natThreadInst&& right )
     {
         this->~natThreadInst();
 
@@ -152,7 +152,7 @@ struct natEventInst
         this->evtHandle = manager->CreateEvent();
     }
     inline natEventInst( const natEventInst& ) = delete;
-    inline natEventInst( natEventInst&& right ) noexcept
+    inline natEventInst( natEventInst&& right )
     {
         this->manager = right.manager;
         this->evtHandle = right.evtHandle;
@@ -177,7 +177,7 @@ public:
     }
 
     inline natEventInst& operator = ( const natEventInst& ) = delete;
-    inline natEventInst& operator = ( natEventInst&& right ) noexcept
+    inline natEventInst& operator = ( natEventInst&& right )
     {
         _clear_entity();
 
@@ -228,7 +228,7 @@ struct natCondInst
         this->condVar = manager->CreateConditionVariable();   
     }
     inline natCondInst( const natCondInst& ) = delete;
-    inline natCondInst( natCondInst&& right ) noexcept
+    inline natCondInst( natCondInst&& right )
     {
         this->condVar = right.condVar;
 
@@ -253,7 +253,7 @@ public:
     }
 
     inline natCondInst& operator = ( const natCondInst& ) = delete;
-    inline natCondInst& operator = ( natCondInst&& right ) noexcept
+    inline natCondInst& operator = ( natCondInst&& right )
     {
         _clear_entity();
     
@@ -308,7 +308,7 @@ struct natRWLock
         this->rwlock = lock;
     }
     inline natRWLock( const natRWLock& ) = delete;
-    inline natRWLock( natRWLock&& right ) noexcept
+    inline natRWLock( natRWLock&& right )
     {
         this->rwlock = right.rwlock;
         this->manager = right.manager;
@@ -332,7 +332,7 @@ public:
     }
 
     inline natRWLock& operator = ( const natRWLock& ) = delete;
-    inline natRWLock& operator = ( natRWLock&& right ) noexcept
+    inline natRWLock& operator = ( natRWLock&& right )
     {
         _clear_entity();
 
@@ -392,7 +392,7 @@ struct natOptRWLock
         this->rwlock = lock;
     }
     inline natOptRWLock( const natOptRWLock& ) = delete;
-    inline natOptRWLock( natOptRWLock&& right ) noexcept
+    inline natOptRWLock( natOptRWLock&& right )
     {
         this->rwlock = right.rwlock;
         this->manager = right.manager;
@@ -416,7 +416,7 @@ public:
     }
 
     inline natOptRWLock& operator = ( const natOptRWLock& ) = delete;
-    inline natOptRWLock& operator = ( natOptRWLock&& right ) noexcept
+    inline natOptRWLock& operator = ( natOptRWLock&& right )
     {
         _clear_entity();
 
@@ -524,7 +524,7 @@ struct CSpinLockContext
     }
 
     inline CSpinLockContext( const CSpinLockContext& lock ) = delete;
-    inline CSpinLockContext( CSpinLockContext&& right ) noexcept
+    inline CSpinLockContext( CSpinLockContext&& right )
     {
         this->lock = right.lock;
 
@@ -549,7 +549,7 @@ public:
     }
 
     inline CSpinLockContext& operator = ( const CSpinLockContext& ) = delete;
-    inline CSpinLockContext& operator = ( CSpinLockContext&& right ) noexcept
+    inline CSpinLockContext& operator = ( CSpinLockContext&& right )
     {
         this->_release_lock();
 
@@ -565,16 +565,11 @@ public:
         return *this;
     }
 
-    inline void Suspend( void )
+    inline void release( void )
     {
         this->_release_lock();
 
         this->lock = nullptr;
-    }
-
-    inline CSpinLock* GetCurrentLock( void )
-    {
-        return this->lock;
     }
 
 private:

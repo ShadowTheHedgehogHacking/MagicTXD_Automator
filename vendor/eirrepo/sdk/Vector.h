@@ -518,7 +518,7 @@ private:
                 if ( insertPos < oldCount )
                 {
                     size_t afterInsertOff = ( insertPos + insertCount );
-                    size_t conflictCount = ( oldCount - insertPos );
+                    size_t conflictCount = ( std::min( oldCount, afterInsertOff ) - insertPos );
                     //size_t sourceStart = ( insertPos );
                     size_t sourceEnd = ( insertPos + conflictCount );
                     size_t establishStart = ( afterInsertOff );
@@ -933,46 +933,31 @@ private:
     }
 
 public:
-    // Removes multiple items from the vector.
-    inline void RemoveMultipleByIndex( size_t removeIdx, size_t removeCnt )
+    inline void RemoveByIndex( size_t removeIdx )
     {
-        if ( removeCnt == 0 )
-            return;
-
         size_t oldCount = this->data.data_count;
 
-        if ( removeIdx >= oldCount )
+        if ( oldCount == 0 )
             return;
 
-        size_t realRemoveCnt = std::min( removeCnt, oldCount - removeIdx );
-
-        if ( realRemoveCnt == 0 )
-            return;
-
-        size_t newCount = ( oldCount - realRemoveCnt );
+        size_t newCount = ( oldCount - 1 );
 
         // We can always shrink memory, so go for it.
         structType *use_data = this->data.data_entries;
 
-        // We move down all items to squash the items that were removed.
-        for ( size_t n = removeIdx; n < newCount; n++ )
+        use_data[ newCount ].~structType();
+
+        // We move down all items to squash the item that was removed.
         {
-            *( use_data + n ) = std::move( *( use_data + n + realRemoveCnt ) );
+            size_t canBeSquashedCount = newCount;
+
+            for ( size_t n = removeIdx; n < canBeSquashedCount; n++ )
+            {
+                *( use_data + n ) = std::move( *( use_data + n + 1 ) );
+            }
         }
 
-        // No point in keeping the last entries anymore, so destroy them.
-        for ( size_t n = 0; n < realRemoveCnt; n++ )
-        {
-            use_data[ newCount + n ].~structType();
-        }
-
-        // Squish stuff.
         this->shrink_backed_memory( use_data, newCount );
-    }
-
-    inline void RemoveByIndex( size_t removeIdx )
-    {
-        RemoveMultipleByIndex( removeIdx, 1 );
     }
 
     inline void RemoveFromBack( void )

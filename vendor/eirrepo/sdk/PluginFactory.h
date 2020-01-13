@@ -721,13 +721,13 @@ public:
         }
 
         template <typename pluginStructType>
-        AINLINE static pluginStructType* RESOLVE_STRUCT( classType *object, pluginOffset_t offset, constrArgs&&... args )
+        AINLINE static pluginStructType* RESOLVE_STRUCT( classType *object, pluginOffset_t offset, constrArgs... args )
         {
             return StaticPluginClassFactory::RESOLVE_STRUCT <pluginStructType> ( object, offset );
         }
 
         template <typename pluginStructType>
-        AINLINE static const pluginStructType* RESOLVE_STRUCT( const classType *object, pluginOffset_t offset, constrArgs&&... args )
+        AINLINE static const pluginStructType* RESOLVE_STRUCT( const classType *object, pluginOffset_t offset, constrArgs... args )
         {
             return StaticPluginClassFactory::RESOLVE_STRUCT <const pluginStructType> ( object, offset );
         }
@@ -873,7 +873,7 @@ private:
 
 public:
     template <typename constructorType>
-    inline classType* ConstructPlacementEx( void *classMem, const constructorType& constructor, constrArgs&&... args )
+    inline classType* ConstructPlacementEx( void *classMem, const constructorType& constructor, constrArgs... args )
     {
         classType *resultObject = nullptr;
         {
@@ -916,7 +916,7 @@ public:
     }
 
     template <typename subAllocatorType, typename constructorType>
-    inline classType* ConstructTemplate( subAllocatorType& memAllocator, const constructorType& constructor, constrArgs&&... args )
+    inline classType* ConstructTemplate( subAllocatorType& memAllocator, const constructorType& constructor, constrArgs... args )
     {
         // Attempt to allocate the necessary memory.
         const size_t wholeClassSize = this->GetClassSize();
@@ -945,7 +945,7 @@ public:
 
         struct packed_args_constr
         {
-            inline packed_args_constr( Args&&... theArgs ) : data( std::forward_as_tuple( std::forward <Args> ( theArgs )... ) )
+            inline packed_args_constr( Args&&... theArgs ) : data( std::forward <Args> ( theArgs )... )
             {
                 return;
             }
@@ -969,7 +969,7 @@ public:
     }
 
     template <typename constructorType>
-    inline classType* ClonePlacementEx( void *classMem, const classType *srcObject, const constructorType& constructor, constrArgs&&... args )
+    inline classType* ClonePlacementEx( void *classMem, const classType *srcObject, const constructorType& constructor, constrArgs... args )
     {
         classType *clonedObject = nullptr;
         {
@@ -1024,7 +1024,7 @@ public:
     }
 
     template <typename subAllocatorType, typename constructorType>
-    inline classType* CloneTemplate( subAllocatorType& memAllocator, const classType *srcObject, const constructorType& constructor, constrArgs&&... args )
+    inline classType* CloneTemplate( subAllocatorType& memAllocator, const classType *srcObject, const constructorType& constructor, constrArgs... args )
     {
         // Attempt to allocate the necessary memory.
         const size_t baseClassSize = sizeof( classType );
@@ -1059,14 +1059,14 @@ public:
     };
 
     template <typename subAllocatorType>
-    inline classType* Construct( subAllocatorType& memAllocator, constrArgs&&... args )
+    inline classType* Construct( subAllocatorType& memAllocator, constrArgs... args )
     {
         basicClassConstructor constructor;
 
         return ConstructTemplate( memAllocator, constructor, std::forward <constrArgs> ( args )... );
     }
 
-    inline classType* ConstructPlacement( void *memPtr, constrArgs&&... args )
+    inline classType* ConstructPlacement( void *memPtr, constrArgs... args )
     {
         basicClassConstructor constructor;
 
@@ -1074,14 +1074,14 @@ public:
     }
 
     template <typename subAllocatorType>
-    inline classType* Clone( subAllocatorType& memAllocator, const classType *srcObject, constrArgs&&... args )
+    inline classType* Clone( subAllocatorType& memAllocator, const classType *srcObject, constrArgs... args )
     {
         basicClassConstructor constructor;
 
         return CloneTemplate( memAllocator, srcObject, constructor, std::forward <constrArgs> ( args )... );
     }
 
-    inline classType* ClonePlacement( void *memPtr, const classType *srcObject, constrArgs&&... args )
+    inline classType* ClonePlacement( void *memPtr, const classType *srcObject, constrArgs... args )
     {
         basicClassConstructor constructor;
 

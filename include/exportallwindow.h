@@ -173,35 +173,7 @@ public slots:
 
         rw::Interface *engineInterface = texDict->GetEngine();
 
-        // Get the format to export as.
-        QString formatTarget = this->formatSelBox->currentText();
 
-        if ( formatTarget.isEmpty() == false )
-        {
-            auto ansiFormatTarget = qt_to_ansirw( formatTarget );
-
-            // We need a directory to export to, so ask the user.
-            QString folderExportTarget = QFileDialog::getExistingDirectory(
-                this, getLanguageItemByKey("Main.ExpAll.ExpTarg"),
-                wide_to_qt( this->mainWnd->lastAllExportTarget )
-            );
-
-            if ( folderExportTarget.isEmpty() == false )
-            {
-                auto wFolderExportTarget = qt_to_widerw( folderExportTarget );
-
-                // Remember this path.
-                this->mainWnd->lastAllExportTarget = wFolderExportTarget;
-
-                wFolderExportTarget += L'/';
-
-                // Attempt to get a translator handle into that directory.
-                CFileTranslator *dstTranslator = mainWnd->fileSystem->CreateTranslator( wFolderExportTarget.GetConstString() );
-
-                if ( dstTranslator )
-                {
-                    try
-                    {
                         // If we successfully did any export, we can close.
                         bool hasExportedAnything = false;
 
@@ -214,114 +186,104 @@ public slots:
 
                             if ( texRaster )
                             {
-                                // Create a path to put the image at.
-                                auto imgExportPath = texture->GetName() + '.' + qt_to_ansirw( formatTarget.toLower() );
+								rw::uint32 curWidth = 0;
+								rw::uint32 curHeight = 0;
+								// CALCULATE RULE BASED HERE
+								texRaster->getSize(curWidth, curHeight);
+								MagicLineEdit* widthEdit;
+								MagicLineEdit* heightEdit;
+								//1:1 matching size ALL APPLY RULES
+								if (curWidth == curHeight) {
+									// only resize larger than 16x16
+									if (curWidth > 16) {
+										if (curWidth > 64) {
+											//128++ only resize to 32
+											widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(32)));
+											heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(32)));
+										}
+										else {
+											widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(16)));
+											heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(16)));
+										}
+									}
+									else {
+										//leave 16x16 and lower alone
+										widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curWidth)));
+										heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curHeight)));
+									}
+								}
+								else {
+									// RATIO MISMATCHING case
+									if (curWidth > 2 && curHeight > 2) {
+										if (curWidth == 4 || curHeight == 4) {
+											//4xY/Xx4 case, half
+											widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curWidth / 2)));
+											heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curHeight / 2)));
+										}
+										else {
+											// Ratio is larger than 4xY, not expecting anything over 8x*, may need modification later
+											widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curWidth / 4)));
+											heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curHeight / 4)));
+										}
+									}
+									else {
+										// Do not resize any 1:X nor 2:X
+										widthEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curWidth)));
+										heightEdit = new MagicLineEdit(ansi_to_qt(std::to_string(curHeight)));
+									}
 
-                                CFile *targetStream = dstTranslator->Open( imgExportPath.GetConstString(), "wb" );
+								}
 
-                                if ( targetStream )
-                                {
-                                    try
-                                    {
-                                        rw::Stream *rwStream = RwStreamCreateTranslated( engineInterface, targetStream );
+								/// ENDDD
 
-                                        if ( rwStream )
-                                        {
-                                            try
-                                            {
-                                                // Now attempt the write.
-                                                try
-                                                {
-                                                    if ( StringEqualToZero( ansiFormatTarget.GetConstString(), "RWTEX", false ) )
-                                                    {
-                                                        engineInterface->Serialize( texture, rwStream );
-                                                    }
-                                                    else
-                                                    {
-                                                        texRaster->writeImage( rwStream, ansiFormatTarget.GetConstString() );
-                                                    }
+								// Fetch the sizes (with minimal validation).
+								QString widthDimmString = widthEdit->text();
+								QString heightDimmString = heightEdit->text();
 
-                                                    hasExportedAnything = true;
-                                                }
-                                                catch( rw::RwException& except )
-                                                {
-                                                    // Nope.
-                                                    this->mainWnd->txdLog->addLogMessage(
-                                                        ansi_to_qt(
-                                                            "failed to export texture '" + texture->GetName() + "': " + except.message
-                                                        ), LOGMSG_WARNING
-                                                    );
-                                                }
-                                            }
-                                            catch( ... )
-                                            {
-                                                engineInterface->DeleteStream( rwStream );
+								bool validWidth, validHeight;
 
-                                                throw;
-                                            }
+								int widthDimm = widthDimmString.toInt(&validWidth);
+								int heightDimm = heightDimmString.toInt(&validHeight);
 
-                                            engineInterface->DeleteStream( rwStream );
-                                        }
-                                        else
-                                        {
-                                            this->mainWnd->txdLog->addLogMessage(
-                                                ansi_to_qt(
-                                                    "failed to create RW translation stream for texture " + texture->GetName()
-                                                ), LOGMSG_WARNING
-                                            );
-                                        }
-                                    }
-                                    catch( ... )
-                                    {
-                                        delete targetStream;
+								if (validWidth && validHeight)
+								{
+									// Resize!
+									rw::uint32 rwWidth = (rw::uint32)widthDimm;
+									rw::uint32 rwHeight = (rw::uint32)heightDimm;
 
-                                        throw;
-                                    }
+									bool success = false;
 
-                                    delete targetStream;
-                                }
-                                else
-                                {
-                                    this->mainWnd->txdLog->addLogMessage(
-                                        ansi_to_qt(
-                                            "failed to create export stream for texture " + texture->GetName()
-                                        ), LOGMSG_WARNING
-                                    );
-                                }
-                            }
+									try
+									{
+										// Use default filters.
+										texRaster->resize(rwWidth, rwHeight);
+										shouldClose = true;
+										success = true;
+									}
+									catch (rw::RwException& except)
+									{
+										// We should not close the dialog.
+										shouldClose = false;
+									}
+
+								}
+							}
+							// We have changed the TXD.
+							// END ALL TEXTURE RESIZE
+
                         }
+                        
 
-                        if ( hasExportedAnything )
-                        {
-                            // Remember the format that we used.
-                            this->mainWnd->lastUsedAllExportFormat = ansiFormatTarget;
 
-                            // We can close now.
-                            shouldClose = true;
-                        }
-                    }
-                    catch( ... )
-                    {
-                        delete dstTranslator;
-
-                        throw;
-                    }
-
-                    // Close the directory handle again.
-                    delete dstTranslator;
-                }
-                else
-                {
-                    this->mainWnd->txdLog->showError(
-                        QString( "failed to get a handle to target directory ('" ) + folderExportTarget + QString( "')" )
-                    );
-                }
-            }
-        }
+                
 
         if ( shouldClose )
         {
             this->close();
+			this->mainWnd->NotifyChange();
+			this->mainWnd->updateAllTextureMetaInfo();
+			this->mainWnd->updateTextureView();
+
         }
     }
 

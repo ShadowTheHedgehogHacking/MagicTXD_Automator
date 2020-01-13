@@ -16,14 +16,10 @@
 
 BEGIN_NATIVE_EXECUTIVE
 
-struct condVarNativeEnv;
-
 // Placed inside the condVarNativeEnv::condVarThreadPlugin.
 struct perThreadCondVarRegistration
 {
     RwListEntry <perThreadCondVarRegistration> node;
-
-    void unwait( CExecutiveManagerNative *nativeMan, condVarNativeEnv *env );
 };
 
 struct CCondVarImpl : public CCondVar
@@ -32,18 +28,8 @@ struct CCondVarImpl : public CCondVar
     ~CCondVarImpl( void );
 
     void Wait( CReadWriteWriteContextSafe <>& ctxLock );
-    void Wait( CSpinLockContext& ctxLock );
-    bool WaitTimed( CReadWriteWriteContextSafe <>& ctxLock, unsigned int waitMS );
-    bool WaitTimed( CSpinLockContext& ctxLock, unsigned int waitMS );
-    size_t Signal( void );
-    size_t SignalCount( size_t maxWakeUpCount );
+    void Signal( void );
 
-private:
-    // Establish a wait-ctx.
-    template <typename callbackType>
-    AINLINE bool establish_wait_ctx( const callbackType& cb );
-
-public:
     CExecutiveManagerNative *manager;
     CReadWriteLock *lockAtomicCalls;
     RwList <perThreadCondVarRegistration> listWaitingThreads;

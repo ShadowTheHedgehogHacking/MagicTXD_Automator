@@ -47,12 +47,9 @@ void condVarNativeEnv::condVarThreadPlugin::TerminateHazard( void )
     // waiting state again.
     CCondVarImpl *waitingOnVar = this->waitingOnVar;
 
-    if ( waitingOnVar != nullptr )
-    {
-        // It could be set to nullptr if the thread was signalled instead of running out of time.
+    assert( waitingOnVar != nullptr );
 
-        waitingOnVar->Signal();
-    }
+    waitingOnVar->Signal();
 }
 
 CCondVarImpl::CCondVarImpl( CExecutiveManagerNative *manager )
@@ -71,8 +68,7 @@ CCondVarImpl::~CCondVarImpl( void )
     manager->CloseReadWriteLock( this->lockAtomicCalls );
 }
 
-template <typename callbackType>
-AINLINE bool CCondVarImpl::establish_wait_ctx( const callbackType& cb )
+void CCondVarImpl::Wait( CReadWriteWriteContextSafe <>& ctxLock )
 {
     CExecutiveManagerNative *nativeMan = this->manager;
 
@@ -120,207 +116,67 @@ AINLINE bool CCondVarImpl::establish_wait_ctx( const callbackType& cb )
         PushHazard( nativeMan, threadCondEnv );
     }
 
-    cb( evtWaiter );
+    // Release all locks because we are safe.
+    CReadWriteLock *userLock = ctxLock.GetCurrentLock();
+
+    ctxLock.Suspend();
+
+    // Do the wait.
+    evtWaiter->Wait();
+
+    // We have been revived by a signal, so let us continue.
+    ctxLock = userLock;
 
     // Remove the thread from waiting hazard mode.
-    bool hasBeenWokenUpBySignal = false;
     {
         CUnfairMutexContext ctxThreadState( nativeThread->mtxThreadStatus );
 
         // Remove our hazard again.
         PopHazard( nativeMan );
 
-        // If we are waiting on the running thread, then we terminate this relationship.
-        // We either have reached this due to timeout or because an OS signal has woken ourselves up (Linux).
-        // OS signals are not to be confused with CCondVar Signal method.
-        {
-            CReadWriteWriteContextSafe <> ctxRemoveWaiting( this->lockAtomicCalls );
-
-            if ( CCondVarImpl *waitingOnVar = threadCondEnv->waitingOnVar )
-            {
-                assert( waitingOnVar == this );
-
-                LIST_REMOVE( threadCondEnv->condRegister.node );
-
-                threadCondEnv->waitingOnVar = nullptr;
-            }
-            else
-            {
-                // Since we are not registered as waiting on the running thread, we must have been
-                // woken up by the Signal method. Thus we return that we were not spuriously woken
-                // up!
-                hasBeenWokenUpBySignal = true;
-            }
-        }
+        // Not waiting on any thread anymore.
+        threadCondEnv->waitingOnVar = nullptr;
 
         // We could have woken up by hazard-check, in which case we probably are asked to terminate.
         nativeThread->CheckTerminationRequest();
     }
-
-    return hasBeenWokenUpBySignal;
 }
 
-void CCondVarImpl::Wait( CReadWriteWriteContextSafe <>& ctxLock )
-{
-    this->establish_wait_ctx(
-        [&]( CEvent *evtWaiter )
-        {
-            // Release all locks because we are safe.
-            auto *userLock = ctxLock.GetCurrentLock();
-
-            ctxLock.Suspend();
-
-            // Do the wait.
-            evtWaiter->Wait();
-
-            // We have been revived by a signal, so let us continue.
-            ctxLock = userLock;
-        }
-    );
-}
-
-void CCondVarImpl::Wait( CSpinLockContext& ctxLock )
-{
-    this->establish_wait_ctx(
-        [&]( CEvent *evtWaiter )
-        {
-            // Release all locks because we are safe.
-            auto *userLock = ctxLock.GetCurrentLock();
-
-            ctxLock.Suspend();
-
-            // Do the wait.
-            evtWaiter->Wait();
-
-            // We have been revived by a signal, so let us continue.
-            ctxLock = userLock;
-        }
-    );
-}
-
-bool CCondVarImpl::WaitTimed( CReadWriteWriteContextSafe <>& ctxLock, unsigned int waitMS )
-{
-    return this->establish_wait_ctx(
-        [&]( CEvent *evtWaiter )
-        {
-            // Release all locks because we are safe.
-            auto *userLock = ctxLock.GetCurrentLock();
-
-            ctxLock.Suspend();
-
-            // Do the wait.
-            evtWaiter->WaitTimed( waitMS );
-
-            // We have been revived by a signal, so let us continue.
-            ctxLock = userLock;
-        }
-    );
-}
-
-bool CCondVarImpl::WaitTimed( CSpinLockContext& ctxLock, unsigned int waitMS )
-{
-    return this->establish_wait_ctx(
-        [&]( CEvent *evtWaiter )
-        {
-            // Release all locks because we are safe.
-            auto *userLock = ctxLock.GetCurrentLock();
-
-            ctxLock.Suspend();
-
-            // Do the wait.
-            // We must not use the result of this waiter-variable because
-            // the effects of it are considered purely spurious.
-            evtWaiter->WaitTimed( waitMS );
-
-            // We have been revived by a signal, so let us continue.
-            ctxLock = userLock;
-        }
-    );
-}
-
-void perThreadCondVarRegistration::unwait( CExecutiveManagerNative *nativeMan, condVarNativeEnv *condEnv )
-{
-    condVarNativeEnv::condVarThreadPlugin *threadPlugin = LIST_GETITEM( condVarNativeEnv::condVarThreadPlugin, this, condRegister );
-
-    CExecThreadImpl *nativeThread = condEnv->BackResolveThread( threadPlugin );
-
-    // Set the thread to not wait anymore.
-    // Should open the floodgates.
-    CEvent *evtWaiter = GetCurrentThreadWaiterEvent( nativeMan, nativeThread );
-
-    evtWaiter->Set( false );
-
-    // We are no longer waiting.
-    threadPlugin->waitingOnVar = nullptr;
-}
-
-size_t CCondVarImpl::Signal( void )
+void CCondVarImpl::Signal( void )
 {
     CExecutiveManagerNative *nativeMan = this->manager;
 
     condVarNativeEnv *condEnv = condNativeEnvRegister.get().GetPluginStruct( nativeMan );
 
     if ( !condEnv )
-        return 0;
+        return;
 
     // We need to have a sure-fire go ahead for the list of waiting threads.
     CReadWriteWriteContextSafe <> ctxSignalCall( this->lockAtomicCalls );
-
-    size_t unwait_cnt = 0;
 
     // The idea is to wake all threads that reside in the waiting list.
     // To do that we first reference all threads, so we can safely use their data + plugins.
     // (the list of waiting threads will be allowed to mutate when we release em from their sleep).
     LIST_FOREACH_BEGIN( perThreadCondVarRegistration, this->listWaitingThreads.root, node )
 
-        item->unwait( nativeMan, condEnv );
+        condVarNativeEnv::condVarThreadPlugin *threadPlugin = LIST_GETITEM( condVarNativeEnv::condVarThreadPlugin, item, condRegister );
 
-        unwait_cnt++;
+        CExecThreadImpl *nativeThread = condEnv->BackResolveThread( threadPlugin );
+
+        // Set the thread to not wait anymore.
+        // Should open the floodgates.
+        CEvent *evtWaiter = GetCurrentThreadWaiterEvent( nativeMan, nativeThread );
+
+        evtWaiter->Set( false );
 
     LIST_FOREACH_END
 
     // We have no more waiting threads.
     LIST_CLEAR( this->listWaitingThreads.root );
-
-    return unwait_cnt;
 }
 
-size_t CCondVarImpl::SignalCount( size_t maxSignalCount )
-{
-    CExecutiveManagerNative *nativeMan = this->manager;
-
-    condVarNativeEnv *condEnv = condNativeEnvRegister.get().GetPluginStruct( nativeMan );
-
-    if ( !condEnv )
-        return 0;
-
-    // We need to have a sure-fire go ahead for the list of waiting threads.
-    CReadWriteWriteContextSafe <> ctxSignalCall( this->lockAtomicCalls );
-
-    // Just fetch the thread that has waited the longest, a couple of times.
-    size_t cur_wake_count = 0;
-
-    while ( cur_wake_count < maxSignalCount && LIST_EMPTY( this->listWaitingThreads.root ) == false )
-    {
-        perThreadCondVarRegistration *waiting = LIST_GETITEM( perThreadCondVarRegistration, this->listWaitingThreads.root.prev, node );
-
-        waiting->unwait( nativeMan, condEnv );
-
-        // It is not waiting anymore so remove it from the list.
-        LIST_REMOVE( waiting->node );
-
-        cur_wake_count++;
-    }
-
-    return cur_wake_count;
-}
-
-void CCondVar::Wait( CReadWriteWriteContextSafe <>& ctxLock )                           { ((CCondVarImpl*)this)->Wait( ctxLock ); }
-void CCondVar::Wait( CSpinLockContext& ctxLock )                                        { ((CCondVarImpl*)this)->Wait( ctxLock ); }
-bool CCondVar::WaitTimed( CReadWriteWriteContextSafe <>& ctxLock, unsigned int waitMS ) { return ((CCondVarImpl*)this)->WaitTimed( ctxLock, waitMS ); }
-bool CCondVar::WaitTimed( CSpinLockContext& ctxLock, unsigned int waitMS )              { return ((CCondVarImpl*)this)->WaitTimed( ctxLock, waitMS ); }
-size_t CCondVar::Signal( void )                                                         { return ((CCondVarImpl*)this)->Signal(); }
-size_t CCondVar::SignalCount( size_t maxWakeUpCount )                                   { return ((CCondVarImpl*)this)->SignalCount( maxWakeUpCount ); }
+void CCondVar::Wait( CReadWriteWriteContextSafe <>& ctxLock )   { ((CCondVarImpl*)this)->Wait( ctxLock ); }
+void CCondVar::Signal( void )                                   { ((CCondVarImpl*)this)->Signal(); }
 
 CExecutiveManager* CCondVar::GetManager( void )
 {

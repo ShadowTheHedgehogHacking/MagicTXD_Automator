@@ -116,7 +116,7 @@ bool _event_linux_futex_wait_timed( void *mem, unsigned int msTimeout )
         dur_wait.tv_sec = (time_t)( waitMS / 1000 );
         dur_wait.tv_nsec = ( ( waitMS % 1000 ) * 1000 );
 
-        futex( &item->value, FUTEX_WAIT | FUTEX_PRIVATE_FLAG, 1, &dur_wait, NULL, 0 );
+        futex( &item->value, FUTEX_WAIT | FUTEX_PRIVATE_FLAG, 0, &dur_wait, NULL, 0 );
     }
 
     return true;

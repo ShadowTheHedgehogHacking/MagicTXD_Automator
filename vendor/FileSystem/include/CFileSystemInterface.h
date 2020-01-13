@@ -425,7 +425,7 @@ public:
     virtual size_t          WriteUInt       ( fsUInt_t uiInt )          { return WriteStruct( uiInt ); }
     virtual size_t          WriteShort      ( fsShort_t iShort )        { return WriteStruct( iShort ); }
     virtual size_t          WriteUShort     ( fsUShort_t uShort )       { return WriteStruct( uShort ); }
-    virtual size_t          WriteChar       ( fsChar_t cByte )          { return WriteStruct( cByte ); }
+    virtual size_t          WriteByte       ( fsChar_t cByte )          { return WriteStruct( cByte ); }
     virtual size_t          WriteByte       ( fsUChar_t ucByte )        { return WriteStruct( ucByte ); }
     virtual size_t          WriteWideInt    ( fsWideInt_t wInt )        { return WriteStruct( wInt ); }
     virtual size_t          WriteUWideInt   ( fsUWideInt_t uwInt )      { return WriteStruct( uwInt ); }

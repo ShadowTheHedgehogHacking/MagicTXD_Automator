@@ -15,8 +15,6 @@
 
 #include <type_traits>
 
-#include "MacroUtils.h"
-
 // Some helpers.
 namespace FSDataUtil
 {
@@ -41,26 +39,6 @@ namespace FSDataUtil
             *(--dstPtr) = *(--srcPtrEnd);
         }
     }
-};
-
-namespace eir
-{
-
-template <typename unsignedNumberType>
-AINLINE unsignedNumberType ROTL( unsignedNumberType value, unsigned int rotBy )
-{
-    static constexpr unsigned int bitCount = sizeof(value) * 8;
-
-    return ( value << rotBy ) | ( value >> ( bitCount - rotBy ) );
-}
-template <typename unsignedNumberType>
-AINLINE unsignedNumberType ROTR( unsignedNumberType value, unsigned int rotBy )
-{
-    static constexpr unsigned int bitCount = sizeof(value) * 8;
-
-    return ( value >> rotBy ) | ( value << ( bitCount - rotBy ) );
-}
-
 };
 
 #endif //_EIRREPO_DATA_UTILITIES_

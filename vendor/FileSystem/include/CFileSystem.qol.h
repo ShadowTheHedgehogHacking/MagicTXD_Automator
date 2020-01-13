@@ -79,27 +79,20 @@ private:
 // File translator.
 struct fileTrans
 {
-    inline fileTrans( CFileTranslator *fileTrans )
-    {
-        this->theTrans = fileTrans;
-    }
-
-    inline fileTrans( void ) : fileTrans( nullptr )
-    {
-        return;
-    }
-
     template <typename charType>
     inline fileTrans( CFileSystem *fileSys, const charType *path, eDirOpenFlags dirFlags = DIR_FLAG_NONE )
-        : fileTrans( fileSys->CreateTranslator( path, dirFlags ) )
     {
-        return;
+        this->theTrans = fileSys->CreateTranslator( path, dirFlags );
     }
 
     inline fileTrans( CFileSystem *fileSys, const filePath& path, eDirOpenFlags dirFlags = DIR_FLAG_NONE )
-        : fileTrans( fileSys->CreateTranslator( path, dirFlags ) )
     {
-        return;
+        this->theTrans = fileSys->CreateTranslator( path, dirFlags );
+    }
+
+    inline fileTrans( CFileTranslator *fileTrans )
+    {
+        this->theTrans = fileTrans;
     }
 
     inline fileTrans( fileTrans&& right ) noexcept
@@ -117,30 +110,9 @@ struct fileTrans
         }
     }
 
-    inline fileTrans& operator = ( const fileTrans& ) = delete;
-    inline fileTrans& operator = ( fileTrans&& right ) noexcept
-    {
-        if ( CFileTranslator *old = this->theTrans )
-        {
-            delete old;
-        }
-
-        this->theTrans = right.theTrans;
-
-        right.theTrans = nullptr;
-
-        return *this;
-    }
-
     inline bool is_good( void ) const
     {
         return ( this->theTrans != nullptr );
-    }
-
-    // Can return nullptr.
-    inline CFileTranslator* get_opt( void ) const
-    {
-        return this->theTrans;  
     }
 
     inline CFileTranslator& inst( void )
@@ -192,30 +164,9 @@ struct archiveTrans
         }
     }
 
-    inline archiveTrans& operator = ( const archiveTrans& ) = delete;
-    inline archiveTrans& operator = ( archiveTrans&& right ) noexcept
-    {
-        if ( CArchiveTranslator *old = this->theTrans )
-        {
-            delete old;
-        }
-
-        this->theTrans = right.theTrans;
-
-        right.theTrans = nullptr;
-
-        return *this;
-    }
-
     inline bool is_good( void ) const
     {
         return ( this->theTrans != nullptr );
-    }
-
-    // Can return nullptr.
-    inline CArchiveTranslator* get_opt( void ) const
-    {
-        return this->theTrans;   
     }
 
     inline CArchiveTranslator& inst( void )
@@ -249,74 +200,45 @@ struct filePtr
 {
     // Since files could be unavailable very frequently we make it a habbit of the user to check for availability explicitly (theFile could be nullptr).
 
-    inline filePtr( CFile *theFile, bool destroy_on_leave = true ) noexcept : destroy_on_leave( destroy_on_leave )
-    {
-        this->theFile = theFile;
-    }
-
-    inline filePtr( void ) noexcept : filePtr( nullptr )
-    {
-        return;
-    }
-
-    template <typename charType>
-    inline filePtr( CFileTranslator *fileTrans, const charType *path, const filesysOpenMode& mode, eFileOpenFlags fileFlags = FILE_FLAG_NONE )
-        : filePtr( fileTrans->Open( path, mode, fileFlags ) )
-    {
-        return;
-    }
-
-    inline filePtr( CFileTranslator *fileTrans, const filePath& path, const filesysOpenMode& mode, eFileOpenFlags fileFlags = FILE_FLAG_NONE )
-        : filePtr( fileTrans->Open( path, mode, fileFlags ) )
-    {
-        return;
-    }
-
     template <typename charType>
     inline filePtr( CFileTranslator *fileTrans, const charType *path, const charType *mode, eFileOpenFlags fileFlags = FILE_FLAG_NONE )
-        : filePtr( fileTrans->Open( path, mode, fileFlags ) )
     {
-        return;
+        this->theFile = fileTrans->Open( path, mode, fileFlags );
     }
 
     inline filePtr( CFileTranslator *fileTrans, const filePath& path, const filePath& mode, eFileOpenFlags fileFlags = FILE_FLAG_NONE )
-        : filePtr( fileTrans->Open( path, mode, fileFlags ) )
     {
-        return;
+        this->theFile = fileTrans->Open( path, mode, fileFlags );
+    }
+
+    inline filePtr( CFile *theFile )
+    {
+        this->theFile = theFile;
     }
 
     inline filePtr( filePtr&& right ) noexcept
     {
         this->theFile = right.theFile;
-        this->destroy_on_leave = right.destroy_on_leave;
 
         right.theFile = nullptr;
     }
 
-private:
-    AINLINE void _clean_ref( void )
+    inline ~filePtr( void )
     {
         if ( CFile *theFile = this->theFile )
         {
-            if ( this->destroy_on_leave )
-            {
-                delete theFile;
-            }
+            delete theFile;
         }
-    }
-
-public:
-    inline ~filePtr( void )
-    {
-        _clean_ref();
     }
 
     inline filePtr& operator = ( filePtr&& right ) noexcept
     {
-        _clean_ref();
+        if ( CFile *oldFile = this->theFile )
+        {
+            delete oldFile;
+        }
 
         this->theFile = right.theFile;
-        this->destroy_on_leave = right.destroy_on_leave;
 
         right.theFile = nullptr;
 
@@ -326,12 +248,6 @@ public:
     inline bool is_good( void ) const
     {
         return ( this->theFile != nullptr );
-    }
-
-    // Can return nullptr.
-    inline CFile* get_opt( void ) const
-    {
-        return this->theFile;
     }
 
     inline CFile& inst( void )
@@ -358,7 +274,6 @@ public:
 
 private:
     CFile *theFile;
-    bool destroy_on_leave;
 };
 
 // Helper for the directory iterator that you can get at each translator.
@@ -406,12 +321,6 @@ struct dirIterator
         right.iterator = nullptr;
 
         return *this;
-    }
-
-    // Can return nullptr.
-    inline CDirectoryIterator* get_opt( void ) const
-    {
-        return this->iterator;
     }
 
     inline CDirectoryIterator& inst( void )

@@ -383,7 +383,7 @@ inline eir::String <charType, allocatorType> to_string( const numberType& value,
 }
 
 template <typename numberType, typename charType>
-inline numberType to_number_len( const charType *strnum, size_t strlen, unsigned int base = 10 )
+inline numberType to_number( const charType *strnum, unsigned int base = 10 )
 {
     // TODO: add floating point support.
 
@@ -392,12 +392,9 @@ inline numberType to_number_len( const charType *strnum, size_t strlen, unsigned
 
     typedef typename character_env <charType>::ucp_t ucp_t;
 
-    charenv_charprov_tocplen <charType> prov( strnum, strlen );
-    character_env_iterator <charType, decltype(prov)> iter( strnum, std::move( prov ) );
+    character_env_iterator_tozero <charType> iter( strnum );
 
     bool isSigned = false;
-
-    (void)isSigned;
 
     if constexpr ( std::is_signed <numberType>::value )
     {
@@ -442,12 +439,6 @@ inline numberType to_number_len( const charType *strnum, size_t strlen, unsigned
     {
         return result;
     }
-}
-
-template <typename numberType, typename charType>
-inline numberType to_number( const charType *strnum, unsigned int base = 10 )
-{
-    return to_number_len <numberType> ( strnum, cplen_tozero( strnum ), base );
 }
 
 }

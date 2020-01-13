@@ -52,7 +52,7 @@ tryDecrementAgain:
 
     if ( prevCount == 0 )
     {
-        ctxSem.Suspend();
+        ctxSem.release();
 
         evtWaiter->Wait();
 
