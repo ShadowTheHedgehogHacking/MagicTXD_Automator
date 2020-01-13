@@ -1,0 +1,312 @@
+﻿  half.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Common\Lib\Ext\OpenEXR\ilmbase-2.2.0\Half\half.cpp(97,14) : warning C5033: 'register' is no longer a supported storage class
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Common\Lib\Ext\OpenEXR\ilmbase-2.2.0\Half\half.cpp(98,14) : warning C5033: 'register' is no longer a supported storage class
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Common\Lib\Ext\OpenEXR\ilmbase-2.2.0\Half\half.cpp(99,14) : warning C5033: 'register' is no longer a supported storage class
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Common\Lib\Ext\OpenEXR\ilmbase-2.2.0\Half\half.cpp(117,13) : warning C4244: 'return': conversion from 'int' to 'short', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Common\Lib\Ext\OpenEXR\ilmbase-2.2.0\Half\half.cpp(153,11) : warning C4244: 'return': conversion from 'int' to 'short', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Common\Lib\Ext\OpenEXR\ilmbase-2.2.0\Half\half.cpp(164,15) : warning C4244: 'return': conversion from 'int' to 'short', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Common\Lib\Ext\OpenEXR\ilmbase-2.2.0\Half\half.cpp(178,28) : warning C4244: 'return': conversion from 'int' to 'short', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Common\Lib\Ext\OpenEXR\ilmbase-2.2.0\Half\half.cpp(208,15) : warning C4244: 'return': conversion from 'int' to 'short', possible loss of data
+  HDR_Encode.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Common\Lib\Ext\OpenEXR\ilmbase-2.2.0\Half\half.cpp(215,23) : warning C4244: 'return': conversion from 'int' to 'short', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Common\HDR_Encode.cpp(69,16) : warning C4244: 'argument': conversion from 'float' to 'unsigned short', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Common\HDR_Encode.cpp(1636,17) : warning C4459: declaration of 'clog' hides global declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Tools\MSVC\14.23.28008\include\iostream(32,57) : message : see declaration of 'std::clog'
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Common\HDR_Encode.cpp(1943,16) : warning C4459: declaration of 'clog' hides global declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Tools\MSVC\14.23.28008\include\iostream(32,57) : message : see declaration of 'std::clog'
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Common\HDR_Encode.cpp(2103,44) : warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Common\HDR_Encode.cpp(2103,40) : warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Common\HDR_Encode.cpp(2103,31) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Common\HDR_Encode.cpp(2127,17) : warning C4459: declaration of 'clog' hides global declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Tools\MSVC\14.23.28008\include\iostream(32,57) : message : see declaration of 'std::clog'
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Common\HDR_Encode.cpp(2307,16) : warning C4459: declaration of 'clog' hides global declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Tools\MSVC\14.23.28008\include\iostream(32,57) : message : see declaration of 'std::clog'
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Common\HDR_Encode.cpp(2654,16) : warning C4459: declaration of 'clog' hides global declaration
+  mathlib.cpp
+  softfloat.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Tools\MSVC\14.23.28008\include\iostream(32,57) : message : see declaration of 'std::clog'
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ARM\softfloat.cpp(134,3) : warning C4838: conversion from 'int32_t' to 'const uint32_t' requires a narrowing conversion
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ARM\softfloat.cpp(142,2) : warning C4245: 'initializing': conversion from 'int32_t' to 'const uint32_t', signed/unsigned mismatch
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ARM\softfloat.cpp(137,129) : warning C4838: conversion from 'int32_t' to 'const uint32_t' requires a narrowing conversion
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ARM\softfloat.cpp(138,3) : warning C4838: conversion from 'int32_t' to 'const uint32_t' requires a narrowing conversion
+  ASTC_Decode.cpp
+  ASTC_Encode.cpp
+  ASTC_Encode_Kernel.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ARM\softfloat.cpp(141,129) : warning C4838: conversion from 'int32_t' to 'const uint32_t' requires a narrowing conversion
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(863,37) : warning C4244: '=': conversion from 'double' to 'vtype', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(863,37) : warning C4244:         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(863,37) : warning C4244:         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(863,37) : warning C4244:             vtype=float
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(863,37) : warning C4244:         ]
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(864,37) : warning C4244: '=': conversion from 'double' to 'vtype', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(864,37) : warning C4244:         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(864,37) : warning C4244:         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(864,37) : warning C4244:             vtype=float
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(864,37) : warning C4244:         ]
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(865,37) : warning C4244: '=': conversion from 'double' to 'vtype', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(865,37) : warning C4244:         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(865,37) : warning C4244:         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(865,37) : warning C4244:             vtype=float
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(865,37) : warning C4244:         ]
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(866,37) : warning C4244: '=': conversion from 'double' to 'vtype', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(866,37) : warning C4244:         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(866,37) : warning C4244:         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(866,37) : warning C4244:             vtype=float
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(866,37) : warning C4244:         ]
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8625,26) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8626,26) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8627,26) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8628,26) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8629,26) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8630,26) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8645,30) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8646,26) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8647,26) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8648,26) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8649,26) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  ASTC_Host.cpp
+  ASTC_Library.cpp
+  Codec_ASTC.cpp
+  Codec_ATC.cpp
+  Codec_ATC_RGB.cpp
+  Codec_ATC_RGBA_Explicit.cpp
+  Codec_ATC_RGBA_Interpolated.cpp
+  Codec_ATI1N.cpp
+  Codec_ATI2N.cpp
+  Codec_ATI2N_DXT5.cpp
+  Codec_ATI_TC.cpp
+  CompressonatorXCodec.cpp
+  BC6H_Decode.cpp
+  Generating Code...
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(8667,18) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(2335)  : warning C4701: potentially uninitialized local variable 'new_weight_val' used
+  Compiling...
+  BC6H_Definitions.cpp
+  BC6H_Encode.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ASTC\ASTC_Encode_Kernel.cpp(2334)  : warning C4701: potentially uninitialized local variable 'flt_new_weight_val' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\Codec\BC6H\BC6H_Encode.h(57,49) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\Codec\BC6H\BC6H_Encode.h(61,49) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(532,18) : warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(533,18) : warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(922,79) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(923,79) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(872,17) : warning C4189: 'shakeSize': local variable is initialized but not referenced
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(867,17) : warning C4101: 'temp_epo_code': unreferenced local variable
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(870,17) : warning C4101: 'epo': unreferenced local variable
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(972,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(973,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(976,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(977,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(988,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(989,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(992,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(993,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1009,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1010,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1013,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1014,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1025,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1026,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1029,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1030,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1064,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1065,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1066,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1067,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1070,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1071,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1072,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1073,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1087,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1088,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1089,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1090,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1093,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1094,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1095,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1096,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1118,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1119,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1120,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1121,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1124,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1125,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1126,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1127,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1141,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1142,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1143,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1144,76) : warning C4244: 'argument': conversion from 'int' to 'unsigned char', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1147,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1148,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1149,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1150,53) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1178,38) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1261,11) : warning C4101: 'SrcEndPoints': unreferenced local variable
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1439,43) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1449,43) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1459,43) : warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1496,35) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  BC6H_Library.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\BC6H_Encode.cpp(1507,35) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\Codec\BC6H\BC6H_Encode.h(57,49) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  BC6H_utils.cpp
+  Codec_BC6H.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\Codec\BC6H\BC6H_Encode.h(61,49) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\Codec\BC6H\BC6H_Encode.h(57,49) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\Codec\BC6H\BC6H_Encode.h(61,49) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  3dquant_vpc.cpp
+  BC7_Decode.cpp
+  BC7_Definitions.cpp
+  BC7_Encode.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\Codec_BC6H.cpp(281,35) : warning C4244: '=': conversion from 'secNumType' to 'CMP_WORD', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\Codec_BC6H.cpp(281,35) : warning C4244:         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\Codec_BC6H.cpp(281,35) : warning C4244:         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\Codec_BC6H.cpp(281,35) : warning C4244:             secNumType=int
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC6H\Codec_BC6H.cpp(281,35) : warning C4244:         ]
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\MathMacros.h(7,16) : warning C4018: '<': signed/unsigned mismatch
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(589) : message : see reference to function template instantiation 'decltype(auto) min<DWORD,int>(const primNumType &,const secNumType &)' being compiled
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(589) : message :         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(589) : message :         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(589) : message :             primNumType=DWORD,
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(589) : message :             secNumType=int
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(589) : message :         ]
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\MathMacros.h(13,16) : warning C4018: '>': signed/unsigned mismatch
+  BC7_Library.cpp
+  BC7_Partitions.cpp
+  BC7_utils.cpp
+  Codec_BC7.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(592) : message : see reference to function template instantiation 'decltype(auto) max<int,primNumType>(const int &,const secNumType &)' being compiled
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(592) : message :         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(592) : message :         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(592) : message :             primNumType=DWORD,
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(592) : message :             secNumType=DWORD
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\BC7_Encode.cpp(592) : message :         ]
+  reconstruct.cpp
+  shake.cpp
+  Codec_Block.cpp
+  Codec_Block_4x4.cpp
+  Codec_Block_8x8.cpp
+  Codecbuffer.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\Codec_BC7.cpp(288,35) : warning C4244: '=': conversion from 'secNumType' to 'CMP_WORD', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\Codec_BC7.cpp(288,35) : warning C4244:         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\Codec_BC7.cpp(288,35) : warning C4244:         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\Codec_BC7.cpp(288,35) : warning C4244:             secNumType=int
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\BC7\Codec_BC7.cpp(288,35) : warning C4244:         ]
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\MathMacros.h(7,16) : warning C4018: '<': signed/unsigned mismatch
+  CodecBuffer_Block.cpp
+  Generating Code...
+  Compiling...
+  CodecBuffer_R16.cpp
+  CodecBuffer_R16F.cpp
+  CodecBuffer_R32.cpp
+  CodecBuffer_R32F.cpp
+  CodecBuffer_R8.cpp
+  CodecBuffer_RG16.cpp
+  CodecBuffer_RG16F.cpp
+  CodecBuffer_RG32.cpp
+  CodecBuffer_RG32F.cpp
+  CodecBuffer_RG8.cpp
+  CodecBuffer_RGB888.cpp
+  CodecBuffer_RGB9995EF.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\Buffer\Codecbuffer.cpp(2805) : message : see reference to function template instantiation 'decltype(auto) min<CMP_DWORD,int>(const primNumType &,const secNumType &)' being compiled
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\Buffer\Codecbuffer.cpp(2805) : message :         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\Buffer\Codecbuffer.cpp(2805) : message :         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\Buffer\Codecbuffer.cpp(2805) : message :             primNumType=CMP_DWORD,
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\Buffer\Codecbuffer.cpp(2805) : message :             secNumType=int
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\Buffer\Codecbuffer.cpp(2805) : message :         ]
+  CodecBuffer_RGBA16.cpp
+  CodecBuffer_RGBA16F.cpp
+  CodecBuffer_RGBA2101010.cpp
+  CodecBuffer_RGBA32.cpp
+  CodecBuffer_RGBA32F.cpp
+  CodecBuffer_RGBA8888.cpp
+  Codec.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\Buffer\CodecBuffer_RGB9995EF.cpp(142,10) : warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\Codec\BC6H\BC6H_Encode.h(57,49) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Codec_DXTC.cpp
+  Generating Code...
+  Compiling...
+  Codec_DXTC_Alpha.cpp
+  Codec_DXTC_RGBA.cpp
+  Codec_DXT1.cpp
+  Codec_DXT3.cpp
+  Codec_DXT5.cpp
+  Codec_DXT5_RBxG.cpp
+  Codec_DXT5_RGxB.cpp
+  Codec_DXT5_RxBG.cpp
+  Codec_DXT5_Swizzled.cpp
+  Codec_DXT5_xGBR.cpp
+  Codec_DXT5_xGxR.cpp
+  Codec_DXT5_xRBG.cpp
+  Codec_ETC.cpp
+  Codec_ETC2.cpp
+  Codec_ETC2_RGB.cpp
+  Codec_ETC_RGB.cpp
+  Codec_ETC_RGBA_Explicit.cpp
+  Codec_ETC_RGBA_Interpolated.cpp
+  etc.cpp
+  Codec_GT.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Header\Codec\BC6H\BC6H_Encode.h(61,49) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  GT_Decode.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\Codec_GT.cpp(229,35) : warning C4244: '=': conversion from 'secNumType' to 'WORD', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\Codec_GT.cpp(229,35) : warning C4244:         with
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\Codec_GT.cpp(229,35) : warning C4244:         [
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\Codec_GT.cpp(229,35) : warning C4244:             secNumType=int
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\Codec_GT.cpp(229,35) : warning C4244:         ]
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\GT_Decode.cpp(15,11) : warning C4100: 'in': unreferenced formal parameter
+  GT_Encode.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\GT_Decode.cpp(14,44) : warning C4100: 'out': unreferenced formal parameter
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\GT_Encode.cpp(20,92) : warning C4100: 'out': unreferenced formal parameter
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\GT_Encode.cpp(20,47) : warning C4100: 'in': unreferenced formal parameter
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\GT_Encode.cpp(26,50) : warning C4100: 'block_dxtc': unreferenced formal parameter
+  etcdec.cxx
+  etcimage.cxx
+  etcpack.cxx
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\GT\GT_Encode.cpp(26,33) : warning C4100: 'block_32': unreferenced formal parameter
+  Compress.cpp
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(443,22) : warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(219,38) : warning C4244: 'argument': conversion from 'const double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(220,51) : warning C4244: 'argument': conversion from 'const double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(222,24) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(223,21) : warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(226,27) : warning C4018: '<': signed/unsigned mismatch
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(227,31) : warning C4018: '<': signed/unsigned mismatch
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(281,27) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(282,27) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(283,27) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(284,27) : warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(289,76) : warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(329,37) : warning C4244: 'argument': conversion from 'const double' to 'float', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(339,28) : warning C4244: '=': conversion from 'float' to 'CMP_BYTE', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(340,28) : warning C4244: '=': conversion from 'float' to 'CMP_BYTE', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(341,28) : warning C4244: '=': conversion from 'float' to 'CMP_BYTE', possible loss of data
+  Compressonator.cpp
+  Generating Code...
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Compress.cpp(342,28) : warning C4244: '=': conversion from 'float' to 'CMP_BYTE', possible loss of data
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(6166)  : warning C4701: potentially uninitialized local variable 'best_sw' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(6252)  : warning C4701: potentially uninitialized local variable 'best_sw' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(8079)  : warning C4701: potentially uninitialized local variable 'best_sw' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(7961)  : warning C4701: potentially uninitialized local variable 'compressed1_flip' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(7962)  : warning C4701: potentially uninitialized local variable 'compressed2_flip' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(7955)  : warning C4701: potentially uninitialized local variable 'compressed1_norm' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(7956)  : warning C4701: potentially uninitialized local variable 'compressed2_norm' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(9442)  : warning C4701: potentially uninitialized local variable 'alphaimg2' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(9442)  : warning C4703: potentially uninitialized local pointer variable 'alphaimg2' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(9506)  : warning C4701: potentially uninitialized local variable 'newalphaimg' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(9506)  : warning C4703: potentially uninitialized local pointer variable 'newalphaimg' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(16078)  : warning C4701: potentially uninitialized local variable 'extendedheight' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(16078)  : warning C4701: potentially uninitialized local variable 'extendedwidth' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(16078)  : warning C4701: potentially uninitialized local variable 'height' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(16078)  : warning C4701: potentially uninitialized local variable 'width' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(15968)  : warning C4701: potentially uninitialized local variable 'alphaimg2' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(16078)  : warning C4701: potentially uninitialized local variable 'srcimg' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(15968)  : warning C4703: potentially uninitialized local pointer variable 'alphaimg2' used
+C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\Source\Codec\ETC\etcpack\etcpack.cxx(16078)  : warning C4703: potentially uninitialized local pointer variable 'srcimg' used
+  Compressonatori_tc.c
+  dxtc_v11_compress.c
+  dxtc_v11_compress_asm.c
+  Generating Code...
+  CompressonatorLib.vcxproj -> C:\Users\dreamsyntax\Desktop\MagicTXD_ShadowAutomator_TEXGEN\vendor\rwlib\vendor\amdtc\Compressonator\VS2015\..\Build\VS2015\Debug\x64\Compressonator_MTd.lib

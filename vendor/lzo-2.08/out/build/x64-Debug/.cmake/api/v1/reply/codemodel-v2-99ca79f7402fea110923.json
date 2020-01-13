@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lzo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "dict::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dict-Debug-2e68208c82b31851de57.json",
+					"name" : "dict",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lzo_static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lzo_static-Debug-b211bde4c7c0cf65ef3c.json",
+					"name" : "lzo_static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lzopack::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lzopack-Debug-f0503fbfbe032f1f7307.json",
+					"name" : "lzopack",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lzotest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lzotest-Debug-90f59b1a5c2b65bec354.json",
+					"name" : "lzotest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "overlap::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-overlap-Debug-77b6a768fd903add7cb3.json",
+					"name" : "overlap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "precomp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-precomp-Debug-feb6afc8a06ac1100040.json",
+					"name" : "precomp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "precomp2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-precomp2-Debug-d15c6bbc2342f3262bd5.json",
+					"name" : "precomp2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simple::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simple-Debug-2fdaf58dd3253cebc082.json",
+					"name" : "simple",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug",
+		"source" : "C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

@@ -1,0 +1,13 @@
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/simple.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/lzo_static.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/overlap.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/install/local.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/lzotest.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/dict.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/lzopack.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/precomp2.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/precomp.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/list_install_components.dir
+C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/install.dir

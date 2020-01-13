@@ -1,0 +1,28 @@
+Determining if the function clock_gettime exists failed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_85acc 
+[1/2] Building C object CMakeFiles\cmTC_85acc.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_85acc.exe
+FAILED: cmTC_85acc.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_85acc.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_85acc.dir\CheckFunctionExists.c.obj  /out:cmTC_85acc.exe /implib:cmTC_85acc.lib /pdb:cmTC_85acc.pdb /version:0.0  /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_85acc.dir\CheckFunctionExists.c.obj /out:cmTC_85acc.exe /implib:cmTC_85acc.lib /pdb:cmTC_85acc.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_85acc.dir/intermediate.manifest CMakeFiles\cmTC_85acc.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol clock_gettime referenced in function main
+cmTC_85acc.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+Determining if the function strncasecmp exists failed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a3ca1 
+[1/2] Building C object CMakeFiles\cmTC_a3ca1.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_a3ca1.exe
+FAILED: cmTC_a3ca1.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_a3ca1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_a3ca1.dir\CheckFunctionExists.c.obj  /out:cmTC_a3ca1.exe /implib:cmTC_a3ca1.lib /pdb:cmTC_a3ca1.pdb /version:0.0  /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_a3ca1.dir\CheckFunctionExists.c.obj /out:cmTC_a3ca1.exe /implib:cmTC_a3ca1.lib /pdb:cmTC_a3ca1.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_a3ca1.dir/intermediate.manifest CMakeFiles\cmTC_a3ca1.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol strncasecmp referenced in function main
+cmTC_a3ca1.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+

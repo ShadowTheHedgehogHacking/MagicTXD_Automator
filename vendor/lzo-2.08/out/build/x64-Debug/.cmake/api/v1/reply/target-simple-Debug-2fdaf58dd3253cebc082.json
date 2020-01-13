@@ -1,0 +1,432 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "simple.exe"
+		},
+		{
+			"path" : "simple.pdb"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"lzo_add_executable",
+			"target_link_libraries",
+			"include_directories",
+			"add_definitions",
+			"lzo_check_function_exists",
+			"lzo_check_include_file",
+			"lzo_check_type_size"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 90,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 75,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 103,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 104,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 153,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 149,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 120,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 155,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 149,
+				"parent" : 10
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 12
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 122,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 14
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 162,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 132,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 17
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 133,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 19
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 134,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 21
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 142,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 23
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 135,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 25
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 131,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 27
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 136,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 29
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 138,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 31
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 137,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 33
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 139,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 35
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 140,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 37
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 141,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 128,
+				"parent" : 39
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MDd /ZI /Ob0 /Od /RTC1 /JMC  "
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 7,
+					"define" : "HAVE_STAT=1"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "HAVE_STDINT_H=1"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "HAVE_STRNICMP=1"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "HAVE_SYS_STAT_H=1"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "HAVE_SYS_TYPES_H=1"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "LZO_ABI_LITTLE_ENDIAN=1"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "SIZEOF_INT=4"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "SIZEOF_LONG=4"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "SIZEOF_LONG_LONG=8"
+				},
+				{
+					"backtrace" : 24,
+					"define" : "SIZEOF_OFF_T=4"
+				},
+				{
+					"backtrace" : 26,
+					"define" : "SIZEOF_PTRDIFF_T=8"
+				},
+				{
+					"backtrace" : 28,
+					"define" : "SIZEOF_SHORT=2"
+				},
+				{
+					"backtrace" : 30,
+					"define" : "SIZEOF_SIZE_T=8"
+				},
+				{
+					"backtrace" : 32,
+					"define" : "SIZEOF_UINTPTR_T=8"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "SIZEOF_VOID_P=8"
+				},
+				{
+					"backtrace" : 36,
+					"define" : "SIZEOF___INT16=2"
+				},
+				{
+					"backtrace" : 38,
+					"define" : "SIZEOF___INT32=4"
+				},
+				{
+					"backtrace" : 40,
+					"define" : "SIZEOF___INT64=8"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "lzo_static::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "simple::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /MDd /ZI /Ob0 /Od /RTC1 /JMC",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "lzo2.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "simple",
+	"nameOnDisk" : "simple.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "examples/simple.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

@@ -1,0 +1,238 @@
+The system is: Windows - 10.0.18362 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) C/C++ Optimizing Compiler Version 19.22.27905 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.22.27905.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_5d4df 
+[1/2] Building C object CMakeFiles\cmTC_5d4df.dir\testCCompiler.c.obj
+[2/2] Linking C executable cmTC_5d4df.exe
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_6caaa 
+[1/2] Building C object CMakeFiles\cmTC_6caaa.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_6caaa.exe
+
+
+
+
+Detecting C [] compiler features compiled with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a3595 
+[1/2] Building C object CMakeFiles\cmTC_a3595.dir\feature_tests.c.obj
+[2/2] Linking C executable cmTC_a3595.exe
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_variadic_macros
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_674c1 
+[1/2] Building C object CMakeFiles\cmTC_674c1.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_674c1.exe
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_6f035 
+[1/2] Building C object CMakeFiles\cmTC_6f035.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_6f035.exe
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_f313b 
+[1/2] Building C object CMakeFiles\cmTC_f313b.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_f313b.exe
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9948f 
+[1/2] Building C object CMakeFiles\cmTC_9948f.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_9948f.exe
+
+
+Determining size of short passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_42955 
+[1/2] Building C object CMakeFiles\cmTC_42955.dir\SIZEOF_SHORT.c.obj
+[2/2] Linking C executable cmTC_42955.exe
+
+
+Determining size of int passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_26192 
+[1/2] Building C object CMakeFiles\cmTC_26192.dir\SIZEOF_INT.c.obj
+[2/2] Linking C executable cmTC_26192.exe
+
+
+Determining size of long passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_f7e7e 
+[1/2] Building C object CMakeFiles\cmTC_f7e7e.dir\SIZEOF_LONG.c.obj
+[2/2] Linking C executable cmTC_f7e7e.exe
+
+
+Determining size of long long passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9b914 
+[1/2] Building C object CMakeFiles\cmTC_9b914.dir\SIZEOF_LONG_LONG.c.obj
+[2/2] Linking C executable cmTC_9b914.exe
+
+
+Determining size of ptrdiff_t passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c462f 
+[1/2] Building C object CMakeFiles\cmTC_c462f.dir\SIZEOF_PTRDIFF_T.c.obj
+[2/2] Linking C executable cmTC_c462f.exe
+
+
+Determining size of size_t passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_1a153 
+[1/2] Building C object CMakeFiles\cmTC_1a153.dir\SIZEOF_SIZE_T.c.obj
+[2/2] Linking C executable cmTC_1a153.exe
+
+
+Determining size of void * passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a50cf 
+[1/2] Building C object CMakeFiles\cmTC_a50cf.dir\SIZEOF_VOID_P.c.obj
+[2/2] Linking C executable cmTC_a50cf.exe
+
+
+Determining size of uintptr_t passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_89e24 
+[1/2] Building C object CMakeFiles\cmTC_89e24.dir\SIZEOF_UINTPTR_T.c.obj
+[2/2] Linking C executable cmTC_89e24.exe
+
+
+Determining size of __int16 passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_8a655 
+[1/2] Building C object CMakeFiles\cmTC_8a655.dir\SIZEOF___INT16.c.obj
+[2/2] Linking C executable cmTC_8a655.exe
+
+
+Determining size of __int32 passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_8dc91 
+[1/2] Building C object CMakeFiles\cmTC_8dc91.dir\SIZEOF___INT32.c.obj
+[2/2] Linking C executable cmTC_8dc91.exe
+
+
+Determining size of __int64 passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_10255 
+[1/2] Building C object CMakeFiles\cmTC_10255.dir\SIZEOF___INT64.c.obj
+[2/2] Linking C executable cmTC_10255.exe
+
+
+Determining size of off_t passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_40d48 
+[1/2] Building C object CMakeFiles\cmTC_40d48.dir\SIZEOF_OFF_T.c.obj
+[2/2] Linking C executable cmTC_40d48.exe
+
+
+Determining if the function stat exists passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_be4a6 
+[1/2] Building C object CMakeFiles\cmTC_be4a6.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_be4a6.exe
+
+
+Determining if the function strnicmp exists passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d85eb 
+[1/2] Building C object CMakeFiles\cmTC_d85eb.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_d85eb.exe
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_acfc8 
+[1/2] Building C object CMakeFiles\cmTC_acfc8.dir\CMAKE_SIZEOF_UNSIGNED_SHORT.c.obj
+[2/2] Linking C executable cmTC_acfc8.exe
+
+
+Determining if the system is big endian passed with the following output:
+Change Dir: C:/Users/dreamsyntax/Desktop/MagicTXD_ShadowAutomator/vendor/lzo-2.08/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ccd80 
+[1/2] Building C object CMakeFiles\cmTC_ccd80.dir\TestEndianess.c.obj
+[2/2] Linking C executable cmTC_ccd80.exe
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
